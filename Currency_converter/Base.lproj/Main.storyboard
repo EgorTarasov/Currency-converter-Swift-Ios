@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,7 +12,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Currency_converter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Перевод валют " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pr-i6-RKi">
@@ -22,8 +22,48 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdk-nV-fCg">
-                                <rect key="frame" x="112" y="480" width="96" height="54"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HTR-Nc-Kng">
+                                <rect key="frame" x="149" y="120" width="116" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="rFm-H5-Fem"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-Zx-o5H">
+                                <rect key="frame" x="149" y="221" width="116" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="116" id="OIk-Wx-efh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6jK-eL-c87">
+                                <rect key="frame" x="63" y="81" width="288" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="s8z-d7-76v"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="$"/>
+                                    <segment title="₽"/>
+                                    <segment title="£"/>
+                                    <segment title="₴"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="flE-FT-Zf3">
+                                <rect key="frame" x="63" y="182" width="288" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="8yz-Zv-j7T"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="$"/>
+                                    <segment title="₽"/>
+                                    <segment title="£"/>
+                                    <segment title="₴"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdk-nV-fCg">
+                                <rect key="frame" x="159" y="319" width="96" height="54"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="96" id="aW2-Ka-q1M"/>
@@ -38,65 +78,29 @@
                                     <action selector="ConverteTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aHZ-94-r35"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HTR-Nc-Kng">
-                                <rect key="frame" x="102" y="120" width="116" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="116" id="rFm-H5-Fem"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVI-Zx-o5H">
-                                <rect key="frame" x="102" y="177" width="116" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="116" id="OIk-Wx-efh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qkh-dj-e21">
-                                <rect key="frame" x="27" y="183.5" width="16" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="₽" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OdI-HU-vk3">
-                                <rect key="frame" x="27" y="127.5" width="11" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Для перевода в одно поле введите число второе оставьте пустым " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zak-cf-9cW">
-                                <rect key="frame" x="16" y="53" width="296" height="59"/>
-                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="LVI-Zx-o5H" firstAttribute="top" secondItem="HTR-Nc-Kng" secondAttribute="bottom" constant="23" id="2Rf-5V-x5c"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hdk-nV-fCg" secondAttribute="bottom" constant="34" id="5lW-Xr-q21"/>
-                            <constraint firstItem="Zak-cf-9cW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6bl-HJ-5Fr"/>
+                            <constraint firstItem="LVI-Zx-o5H" firstAttribute="top" secondItem="HTR-Nc-Kng" secondAttribute="bottom" constant="67" id="2Rf-5V-x5c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hdk-nV-fCg" secondAttribute="bottom" constant="250" id="5lW-Xr-q21"/>
                             <constraint firstItem="HTR-Nc-Kng" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="B9R-LM-Vrc"/>
                             <constraint firstItem="6Pr-i6-RKi" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KfI-3x-cJr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Zak-cf-9cW" secondAttribute="trailing" constant="8" id="Po4-1V-Ghu"/>
-                            <constraint firstItem="Qkh-dj-e21" firstAttribute="top" secondItem="OdI-HU-vk3" secondAttribute="bottom" constant="35" id="S8B-m3-DxE"/>
                             <constraint firstItem="hdk-nV-fCg" firstAttribute="centerX" relation="lessThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="SYQ-7C-2la"/>
-                            <constraint firstItem="OdI-HU-vk3" firstAttribute="leading" secondItem="Qkh-dj-e21" secondAttribute="leading" id="UaH-17-cyV"/>
-                            <constraint firstItem="Zak-cf-9cW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="53" id="WYC-AB-z2z"/>
                             <constraint firstItem="HTR-Nc-Kng" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aEQ-LD-XBa"/>
                             <constraint firstItem="6Pr-i6-RKi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="13" id="ggz-iY-Y4O"/>
-                            <constraint firstItem="Qkh-dj-e21" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="27" id="oKp-Ib-GYL"/>
-                            <constraint firstItem="Qkh-dj-e21" firstAttribute="centerY" secondItem="LVI-Zx-o5H" secondAttribute="centerY" id="rFg-iO-03X"/>
+                            <constraint firstItem="flE-FT-Zf3" firstAttribute="top" secondItem="HTR-Nc-Kng" secondAttribute="bottom" constant="28" id="iTa-z5-kco"/>
+                            <constraint firstItem="6jK-eL-c87" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ppa-Qo-ER1"/>
                             <constraint firstItem="LVI-Zx-o5H" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tNS-gp-Jpy"/>
+                            <constraint firstItem="HTR-Nc-Kng" firstAttribute="top" secondItem="6jK-eL-c87" secondAttribute="bottom" constant="8" id="w8Q-Zv-YEs"/>
                             <constraint firstItem="hdk-nV-fCg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xg0-09-4Cl"/>
+                            <constraint firstItem="flE-FT-Zf3" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="xm1-Q9-eOu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="FirstCurrency" destination="6jK-eL-c87" id="Pb2-59-0x8"/>
                         <outlet property="FirstValue" destination="HTR-Nc-Kng" id="Sm3-X9-rom"/>
+                        <outlet property="SecondCurrency" destination="flE-FT-Zf3" id="6Ee-Rv-tdm"/>
                         <outlet property="SecondValue" destination="LVI-Zx-o5H" id="FQ4-O5-ts5"/>
                     </connections>
                 </viewController>
