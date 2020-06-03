@@ -9,12 +9,32 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let currency : Float = 0
+    let value : String = "US"
+    var result : Float = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+       
     }
-
+    
+    
+    @IBOutlet weak var FirstValue: UITextField!
+    
+    @IBOutlet weak var SecondValue: UITextField!
+    
+    
+    @IBAction func ConverteTap(_ sender: UIButton) {
+        
+        let FirstCurrency = Float(FirstValue.text!) ?? 0.0
+        
+        //var SecondCurrency : Float = 0
+        if value == "US"{
+            result = FirstCurrency / 74
+        }
+        SecondValue.text = String(result)
+        print(result)
+    }
+    
 
 }
 
